@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 170" role="img" aria-labelledby="title desc">
+  <title id="title">Kiterae Vertical logo</title>
+  <desc id="desc">A clean wordmark with stacked leaf modules suggesting managed vertical growth.</desc>
+  <rect width="780" height="170" fill="#f7f3ea"/>
+  <g transform="translate(36 30)">
+    <rect x="0" y="0" width="70" height="110" rx="18" fill="#173f35"/>
+    <path d="M35 18c18 9 25 23 21 43-18-4-31-15-37-32 4-5 9-9 16-11Z" fill="#9ccf7a"/>
+    <path d="M35 52c18 9 25 23 21 43-18-4-31-15-37-32 4-5 9-9 16-11Z" fill="#d9a441"/>
+    <path d="M21 20v78" stroke="#f7f3ea" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="132" y="82" font-family="Georgia, 'Times New Roman', serif" font-size="54" fill="#173f35" letter-spacing="-1">Kiterae Vertical</text>
+  <text x="136" y="119" font-family="Arial, sans-serif" font-size="17" fill="#5e6f64" letter-spacing="2">MANAGED GROWING SYSTEMS</text>
+</svg>

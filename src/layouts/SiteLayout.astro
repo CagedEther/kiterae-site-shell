@@ -1,0 +1,59 @@
+---
+import "../styles/global.css";
+import ContactBanner from "../components/ContactBanner.astro";
+import site from "../../content/site.json";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url);
+const showContactBanner = Astro.url.pathname !== "/contact/" && Astro.url.pathname !== "/contact";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical.toString()} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="masthead">
+        <div class="masthead-inner">
+          <a class="brand-lockup" href="/" aria-label={`${site.brand} home`}>
+            <img class="brand-logo" src={site.logo.src} alt={site.logo.alt} width="780" height="170" />
+          </a>
+          <nav class="site-nav" aria-label="Primary navigation">
+            {site.navigation.map((item) => (
+              <a href={item.href}>{item.label}</a>
+            ))}
+          </nav>
+        </div>
+        <div class="rule"></div>
+      </header>
+      <main>
+        <slot />
+      </main>
+      {showContactBanner && <ContactBanner />}
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <p class="footer-brand">{site.brand}</p>
+            <p>{site.description}</p>
+          </div>
+          <p>{site.footer.note}</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

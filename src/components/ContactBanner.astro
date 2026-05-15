@@ -1,0 +1,23 @@
+---
+import site from "../../content/site.json";
+
+type SiteWithOptionalBanner = typeof site & {
+  contactBanner?: {
+    heading?: string;
+    linkLabel?: string;
+  };
+};
+
+const siteData = site as SiteWithOptionalBanner;
+const banner = {
+  heading: siteData.contactBanner?.heading ?? "Have a question? Send us a note.",
+  linkLabel: siteData.contactBanner?.linkLabel ?? "Contact us",
+};
+---
+
+<section class="contact-banner" aria-labelledby="contact-banner-title">
+  <a class="contact-banner-inner" href="/contact/">
+    <p id="contact-banner-title">{banner.heading}</p>
+    <span class="contact-banner-link">{banner.linkLabel}</span>
+  </a>
+</section>

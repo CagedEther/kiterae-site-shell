@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1586 992" role="img" aria-labelledby="title desc">
+  <title id="title">Managed vertical farming service model</title>
+  <desc id="desc">A commercial interior with a vertical garden connected to service, crop, monitoring, and reporting notes.</desc>
+  <rect width="1586" height="992" fill="#f6f0e4"/>
+  <rect x="78" y="86" width="1430" height="820" rx="38" fill="#fffaf0" stroke="#173f35" stroke-width="6"/>
+  <rect x="148" y="168" width="390" height="620" rx="26" fill="#173f35"/>
+  <g fill="#9ccf7a">
+    <ellipse cx="236" cy="252" rx="54" ry="34"/>
+    <ellipse cx="352" cy="252" rx="54" ry="34"/>
+    <ellipse cx="468" cy="252" rx="54" ry="34"/>
+    <ellipse cx="236" cy="386" rx="54" ry="34"/>
+    <ellipse cx="352" cy="386" rx="54" ry="34"/>
+    <ellipse cx="468" cy="386" rx="54" ry="34"/>
+    <ellipse cx="236" cy="520" rx="54" ry="34"/>
+    <ellipse cx="352" cy="520" rx="54" ry="34"/>
+    <ellipse cx="468" cy="520" rx="54" ry="34"/>
+    <ellipse cx="236" cy="654" rx="54" ry="34"/>
+    <ellipse cx="352" cy="654" rx="54" ry="34"/>
+    <ellipse cx="468" cy="654" rx="54" ry="34"/>
+  </g>
+  <g stroke="#d9a441" stroke-width="10" stroke-linecap="round">
+    <path d="M630 275h320"/>
+    <path d="M630 405h320"/>
+    <path d="M630 535h320"/>
+    <path d="M630 665h320"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#173f35">
+    <text x="635" y="238" font-size="36" font-weight="700">Service model first</text>
+    <text x="635" y="320" font-size="28">Site fit and access</text>
+    <text x="635" y="450" font-size="28">Crop plan and harvest rhythm</text>
+    <text x="635" y="580" font-size="28">Monitoring and field response</text>
+    <text x="635" y="710" font-size="28">Reporting and buyer workflow</text>
+  </g>
+  <rect x="1045" y="232" width="310" height="420" rx="26" fill="#e7edd8" stroke="#173f35" stroke-width="4"/>
+  <text x="1100" y="308" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#173f35">Outcome</text>
+  <text x="1100" y="370" font-family="Arial, sans-serif" font-size="25" fill="#173f35">Living asset</text>
+  <text x="1100" y="425" font-family="Arial, sans-serif" font-size="25" fill="#173f35">Zero-mile supply</text>
+  <text x="1100" y="480" font-family="Arial, sans-serif" font-size="25" fill="#173f35">Visible ESG story</text>
+  <text x="1100" y="535" font-family="Arial, sans-serif" font-size="25" fill="#173f35">Managed operations</text>
+  <circle cx="1380" cy="730" r="86" fill="#d9a441"/>
+  <text x="1317" y="742" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#173f35">VFaaS</text>
+</svg>

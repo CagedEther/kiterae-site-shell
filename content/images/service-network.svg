@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1586 992" role="img" aria-labelledby="title desc">
+  <title id="title">Vertical farming service network</title>
+  <desc id="desc">A regional service map connecting monitored farms, technicians, crop planning, and customer sites.</desc>
+  <rect width="1586" height="992" fill="#f6f0e4"/>
+  <text x="92" y="112" font-family="Georgia, 'Times New Roman', serif" font-size="58" fill="#173f35">Maintenance is the moat</text>
+  <text x="96" y="165" font-family="Arial, sans-serif" font-size="27" fill="#5e6f64">Distributed farms need distributed service discipline.</text>
+  <g stroke="#d9a441" stroke-width="8" stroke-linecap="round">
+    <path d="M780 460L420 310"/>
+    <path d="M780 460L1120 285"/>
+    <path d="M780 460L1190 650"/>
+    <path d="M780 460L430 700"/>
+  </g>
+  <circle cx="780" cy="460" r="135" fill="#173f35"/>
+  <text x="704" y="445" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#fffaf0">Service</text>
+  <text x="690" y="487" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#fffaf0">Ops Hub</text>
+  <g font-family="Arial, sans-serif" fill="#173f35" font-size="28">
+    <circle cx="420" cy="310" r="92" fill="#e7edd8" stroke="#173f35" stroke-width="5"/>
+    <text x="364" y="318">Lobby</text>
+    <circle cx="1120" cy="285" r="92" fill="#f1d9a6" stroke="#173f35" stroke-width="5"/>
+    <text x="1068" y="293">Hotel</text>
+    <circle cx="1190" cy="650" r="92" fill="#e7edd8" stroke="#173f35" stroke-width="5"/>
+    <text x="1136" y="658">Kitchen</text>
+    <circle cx="430" cy="700" r="92" fill="#f1d9a6" stroke="#173f35" stroke-width="5"/>
+    <text x="364" y="708">Campus</text>
+  </g>
+  <g fill="#9ccf7a">
+    <circle cx="145" cy="805" r="28"/><circle cx="205" cy="805" r="28"/><circle cx="265" cy="805" r="28"/>
+  </g>
+  <text x="110" y="875" font-family="Arial, sans-serif" font-size="24" fill="#173f35">Monitoring, technicians, crop planning, response</text>
+</svg>

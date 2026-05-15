@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1586 992" role="img" aria-labelledby="title desc">
+  <title id="title">Zero-mile hospitality menu</title>
+  <desc id="desc">A restaurant pass connecting on-site crops to menu items and guest storytelling.</desc>
+  <rect width="1586" height="992" fill="#f6f0e4"/>
+  <rect x="100" y="610" width="1386" height="190" rx="28" fill="#173f35"/>
+  <rect x="230" y="208" width="310" height="400" rx="28" fill="#173f35"/>
+  <g fill="#9ccf7a">
+    <ellipse cx="310" cy="306" rx="42" ry="28"/>
+    <ellipse cx="420" cy="306" rx="42" ry="28"/>
+    <ellipse cx="310" cy="430" rx="42" ry="28"/>
+    <ellipse cx="420" cy="430" rx="42" ry="28"/>
+    <ellipse cx="310" cy="548" rx="42" ry="28"/>
+    <ellipse cx="420" cy="548" rx="42" ry="28"/>
+  </g>
+  <g transform="translate(715 235)">
+    <rect x="0" y="0" width="520" height="300" rx="28" fill="#fffaf0" stroke="#173f35" stroke-width="5"/>
+    <text x="52" y="80" font-family="Georgia, 'Times New Roman', serif" font-size="44" fill="#173f35">Menu crop brief</text>
+    <text x="58" y="148" font-family="Arial, sans-serif" font-size="27" fill="#173f35">Herbs</text>
+    <text x="58" y="203" font-family="Arial, sans-serif" font-size="27" fill="#173f35">Microgreens</text>
+    <text x="58" y="258" font-family="Arial, sans-serif" font-size="27" fill="#173f35">Edible flowers</text>
+    <path d="M315 116c72 16 116 62 123 138-80 0-135-38-158-105 8-15 20-26 35-33Z" fill="#d9a441"/>
+  </g>
+  <g fill="#fffaf0" font-family="Arial, sans-serif">
+    <text x="172" y="722" font-size="34" font-weight="700">Harvest near service</text>
+    <text x="620" y="722" font-size="34" font-weight="700">Protect fragile ingredients</text>
+    <text x="1125" y="722" font-size="34" font-weight="700">Tell a specific story</text>
+  </g>
+</svg>

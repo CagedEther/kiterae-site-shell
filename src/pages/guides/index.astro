@@ -1,0 +1,43 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import { formatDate, sortGuides } from "../../lib/guides";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+
+const page = await getEntry("pages", "guides");
+if (!page || page.data.template !== "page") {
+  throw new Error("Missing content/pages/guides.mdx");
+}
+
+const guides = sortGuides(await getCollection("blog"));
+---
+
+<SiteLayout title={page.data.meta.title} description={page.data.meta.description}>
+  <section class="index-header">
+    <p class="eyebrow">{page.data.eyebrow}</p>
+    <h1>{page.data.title}</h1>
+    <p>{page.data.deck}</p>
+  </section>
+  <section class="section-block">
+    <div class="guide-list">
+      {guides.map((guide) => (
+        <article class="guide-list-item">
+          <a class="guide-list-image" href={`/guides/${guide.id}/`} aria-label={`Read ${guide.data.title}`}>
+            <img src={guide.data.leadImage.src} alt={guide.data.leadImage.alt} width="640" height="400" loading="lazy" />
+          </a>
+          <div class="guide-list-copy">
+            <p class="eyebrow">{guide.data.category}</p>
+            <h2>
+              <a href={`/guides/${guide.id}/`}>{guide.data.title}</a>
+            </h2>
+            <p>{guide.data.dek}</p>
+            <div class="guide-meta">
+              <span>{formatDate(guide.data.date)}</span>
+              <span>{guide.data.readingMinutes} min read</span>
+            </div>
+            <a class="text-link" href={`/guides/${guide.id}/`}>Read full article</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</SiteLayout>

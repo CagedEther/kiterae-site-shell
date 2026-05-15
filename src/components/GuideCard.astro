@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { formatDate } from "../lib/guides";
+
+interface Props {
+  guide: CollectionEntry<"blog">;
+  size?: "large" | "compact";
+}
+
+const { guide, size = "compact" } = Astro.props;
+---
+
+<a class:list={["guide-card", `guide-card-${size}`]} href={`/guides/${guide.id}/`}>
+  <p class="eyebrow">{guide.data.category}</p>
+  <h3>{guide.data.title}</h3>
+  <p>{guide.data.dek}</p>
+  <div class="guide-meta">
+    <span>{formatDate(guide.data.date)}</span>
+  </div>
+</a>

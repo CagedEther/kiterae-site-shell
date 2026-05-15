@@ -1,0 +1,21 @@
+---
+import { getEntry, render } from "astro:content";
+import SiteLayout from "../layouts/SiteLayout.astro";
+
+const page = await getEntry("pages", "about");
+if (!page || page.data.template !== "page") throw new Error("Missing content/pages/about.mdx");
+const { Content } = await render(page);
+---
+
+<SiteLayout title={page.data.meta.title} description={page.data.meta.description}>
+  <section class="index-header">
+    <p class="eyebrow">{page.data.eyebrow}</p>
+    <h1>{page.data.title}</h1>
+    <p>{page.data.deck}</p>
+  </section>
+  <section class="page-grid">
+    <div class="article-body">
+      <Content />
+    </div>
+  </section>
+</SiteLayout>

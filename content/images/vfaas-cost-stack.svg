@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1586 992" role="img" aria-labelledby="title desc">
+  <title id="title">Vertical farming as a service cost stack</title>
+  <desc id="desc">Layered cost stack comparing visible equipment cost with managed service obligations.</desc>
+  <rect width="1586" height="992" fill="#f6f0e4"/>
+  <text x="92" y="112" font-family="Georgia, 'Times New Roman', serif" font-size="58" fill="#173f35">Price the operating model</text>
+  <text x="96" y="165" font-family="Arial, sans-serif" font-size="27" fill="#5e6f64">Equipment is one line. Service reliability is the business case.</text>
+  <g font-family="Arial, sans-serif" font-size="30" fill="#173f35">
+    <rect x="150" y="250" width="680" height="90" rx="18" fill="#173f35"/>
+    <text x="195" y="307" fill="#fffaf0">Hardware and installation</text>
+    <rect x="150" y="365" width="760" height="90" rx="18" fill="#d9a441"/>
+    <text x="195" y="422">Control software and monitoring</text>
+    <rect x="150" y="480" width="840" height="90" rx="18" fill="#9ccf7a"/>
+    <text x="195" y="537">Crop planning and harvest labor</text>
+    <rect x="150" y="595" width="920" height="90" rx="18" fill="#f1d9a6"/>
+    <text x="195" y="652">Maintenance, cleaning, replacement</text>
+    <rect x="150" y="710" width="1000" height="90" rx="18" fill="#e7edd8"/>
+    <text x="195" y="767">Reporting, tenant story, menu workflow</text>
+  </g>
+  <g transform="translate(1050 265)">
+    <circle cx="180" cy="180" r="165" fill="#fffaf0" stroke="#173f35" stroke-width="5"/>
+    <path d="M180 82v196" stroke="#173f35" stroke-width="8" stroke-linecap="round"/>
+    <path d="M180 135c60 10 92 48 90 110-61-5-101-38-113-93 6-8 13-14 23-17Z" fill="#9ccf7a"/>
+    <path d="M180 205c-58 9-91 47-90 108 62-4 101-37 114-92-7-8-14-13-24-16Z" fill="#d9a441"/>
+    <text x="80" y="410" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#173f35">Managed OpEx</text>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+{
+  "brand": "Kiterae Vertical",
+  "tagline": "Managed vertical farming for commercial spaces.",
+  "description": "Editorial guides for teams turning underused space into managed vertical gardens, living amenities, and zero-mile ingredient systems.",
+  "url": "https://example.com",
+  "logo": {
+    "src": "/media/kiterae-vertical-logo.svg",
+    "alt": "Kiterae Vertical"
+  },
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "Guides", "href": "/guides" },
+    { "label": "About", "href": "/about" }
+  ],
+  "contactForm": {
+    "endpoint": "https://formspree.io/f/mdabqnnw",
+    "subject": "New message from Kiterae Vertical",
+    "contextLabel": "Inquiry context",
+    "contextName": "inquiry_context",
+    "contextOptions": [
+      "Commercial real estate",
+      "Hospitality program",
+      "Service model",
+      "Cost modeling",
+      "Other"
+    ],
+    "submitLabel": "Send message"
+  },
+  "footer": {
+    "note": "Built as a local-first Astro/MDX publication. Content and images live beside the editorial source."
+  }
+}

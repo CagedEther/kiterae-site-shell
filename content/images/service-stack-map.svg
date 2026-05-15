@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Vertical farm service stack map</title>
+  <desc id="desc">Five connected layers: site fit, crop plan, monitoring, field service, and buyer workflow.</desc>
+  <rect width="1200" height="720" fill="#fffaf0"/>
+  <text x="88" y="92" font-family="Georgia, 'Times New Roman', serif" font-size="48" fill="#173f35">The managed farm service stack</text>
+  <g font-family="Arial, sans-serif" font-size="25" fill="#173f35">
+    <rect x="90" y="156" width="1020" height="78" rx="18" fill="#e7edd8" stroke="#173f35" stroke-width="3"/>
+    <text x="130" y="206">1. Site fit: utilities, access, visibility, drainage</text>
+    <rect x="130" y="266" width="980" height="78" rx="18" fill="#f1d9a6" stroke="#173f35" stroke-width="3"/>
+    <text x="170" y="316">2. Crop plan: varieties, seeding, harvest rhythm</text>
+    <rect x="170" y="376" width="940" height="78" rx="18" fill="#e7edd8" stroke="#173f35" stroke-width="3"/>
+    <text x="210" y="426">3. Monitoring: sensors, alerts, data ownership</text>
+    <rect x="210" y="486" width="900" height="78" rx="18" fill="#f1d9a6" stroke="#173f35" stroke-width="3"/>
+    <text x="250" y="536">4. Field service: cleaning, maintenance, harvest</text>
+    <rect x="250" y="596" width="860" height="78" rx="18" fill="#e7edd8" stroke="#173f35" stroke-width="3"/>
+    <text x="290" y="646">5. Buyer workflow: reporting, menu, tenant story</text>
+  </g>
+</svg>

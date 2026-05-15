@@ -1,0 +1,51 @@
+---
+import site from "../../content/site.json";
+
+type ContactFormSettings = {
+  endpoint?: string;
+  subject?: string;
+  contextLabel?: string;
+  contextName?: string;
+  contextOptions?: string[];
+  submitLabel?: string;
+};
+
+type SiteWithContactForm = typeof site & {
+  contactForm?: ContactFormSettings;
+};
+
+const siteData = site as SiteWithContactForm;
+const form = siteData.contactForm ?? {};
+const endpoint = form.endpoint?.trim();
+const subject = form.subject?.trim() || `New message from ${siteData.brand}`;
+const contextLabel = form.contextLabel?.trim() || "Inquiry context";
+const contextName = form.contextName?.trim() || "inquiry_context";
+const contextOptions =
+  form.contextOptions && form.contextOptions.length > 0
+    ? form.contextOptions
+    : ["General question", "Planning a project", "Pricing or scope", "Partnership", "Other"];
+const submitLabel = form.submitLabel?.trim() || "Send message";
+---
+
+<form class="contact-form" action={endpoint} method="POST">
+  <input type="hidden" name="_subject" value={subject} />
+  <label>
+    <span>Name</span>
+    <input type="text" name="name" autocomplete="name" required />
+  </label>
+  <label>
+    <span>Email</span>
+    <input type="email" name="email" autocomplete="email" required />
+  </label>
+  <label>
+    <span>{contextLabel}</span>
+    <select name={contextName}>
+      {contextOptions.map((option) => <option value={option}>{option}</option>)}
+    </select>
+  </label>
+  <label class="contact-form-wide">
+    <span>Message</span>
+    <textarea name="message" rows="7" required></textarea>
+  </label>
+  <button type="submit">{submitLabel}</button>
+</form>
