@@ -1,4 +1,8 @@
-node_modules/
+# Astro generated files
 .astro/
+
+# Build output
 dist/
-.DS_Store
+
+# Dependencies
+node_modules/

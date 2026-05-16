@@ -1,0 +1,81 @@
+---
+import { getCollection, render } from "astro:content";
+import { formatDate, sortGuides } from "../../lib/guides";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+
+export async function getStaticPaths() {
+  const guides = await getCollection("blog");
+  return guides.map((guide) => ({
+    params: { id: guide.id },
+    props: { guide },
+  }));
+}
+
+const { guide } = Astro.props;
+const { Content } = await render(guide);
+
+const allGuides = sortGuides(await getCollection("blog"));
+const currentIndex = allGuides.findIndex((g) => g.id === guide.id);
+const prevGuide = currentIndex < allGuides.length - 1 ? allGuides[currentIndex + 1] : null;
+const nextGuide = currentIndex > 0 ? allGuides[currentIndex - 1] : null;
+---
+
+<SiteLayout title={guide.data.meta.title} description={guide.data.meta.description}>
+  <article class="article-page">
+    <header class="article-header">
+      <p class="eyebrow">{guide.data.category}</p>
+      <h1>{guide.data.title}</h1>
+      <p class="article-dek">{guide.data.dek}</p>
+      <div class="article-meta">
+        <span>{formatDate(guide.data.date)}</span>
+        <span>{guide.data.readingMinutes} min read</span>
+      </div>
+    </header>
+
+    {guide.data.leadImage && (
+      <figure class="lead-figure">
+        <img
+          src={guide.data.leadImage.src}
+          alt={guide.data.leadImage.alt}
+          width="1586"
+          height="992"
+        />
+        {guide.data.leadImage.caption && (
+          <figcaption>{guide.data.leadImage.caption}</figcaption>
+        )}
+      </figure>
+    )}
+
+    <div class="article-grid">
+      <aside class="article-aside">
+        <span class="aside-label">Category</span>
+        <p>{guide.data.category}</p>
+      </aside>
+      <div class="article-body">
+        <Content />
+      </div>
+    </div>
+
+    {(prevGuide || nextGuide) && (
+      <nav class="section-block" aria-label="Guide navigation">
+        <div class="rule"></div>
+        <div class="section-heading-row" style="margin-top: 2rem;">
+          <div>
+            {prevGuide && (
+              <a class="text-link" href={`/guides/${prevGuide.id}/`}>
+                ← {prevGuide.data.title}
+              </a>
+            )}
+          </div>
+          <div>
+            {nextGuide && (
+              <a class="text-link" href={`/guides/${nextGuide.id}/`}>
+                {nextGuide.data.title} →
+              </a>
+            )}
+          </div>
+        </div>
+      </nav>
+    )}
+  </article>
+</SiteLayout>

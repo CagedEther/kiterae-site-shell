@@ -4,4 +4,9 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   output: "static",
   integrations: [mdx()],
+  vite: {
+    server: {
+      allowedHosts: true,
+    },
+  },
 });
