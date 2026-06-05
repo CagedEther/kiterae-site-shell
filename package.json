@@ -1,26 +1,27 @@
 {
-  "name": "@workspace/kiterae-site",
-  "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "astro dev --host 0.0.0.0 --port ${PORT:-4332}",
-    "sync-content": "node scripts/sync-content.mjs",
-    "build": "node scripts/sync-content.mjs && astro build",
-    "preview": "astro preview --host 0.0.0.0 --port ${PORT:-4332}",
-    "typecheck": "astro check",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/mdx": "5.0.5",
-    "astro": "6.3.2"
-  },
-  "devDependencies": {
-    "@astrojs/check": "0.9.9",
-    "@types/node": "^24.0.0",
-    "typescript": "^5.0.0"
-  },
-  "engines": {
-    "node": ">=20"
+    "name": "@workspace/kiterae-site",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+      "dev": "astro dev --host 0.0.0.0 --port 5000",
+      "sync-content": "node scripts/sync-content.mjs",
+      "build": "astro build",
+      "preview": "astro preview --host 0.0.0.0 --port 5000",
+      "typecheck": "astro check",
+      "astro": "astro"
+    },
+    "dependencies": {
+      "@astrojs/mdx": "5.0.5",
+      "astro": "6.3.2"
+    },
+    "devDependencies": {
+      "@astrojs/check": "0.9.9",
+      "@types/node": "^24.0.0",
+      "typescript": "^5.0.0"
+    },
+    "engines": {
+      "node": ">=22.12.0"
+    }
   }
-}
+  
