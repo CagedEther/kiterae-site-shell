@@ -1,28 +1,45 @@
 import { execSync } from "child_process";
-import { cpSync, rmSync, existsSync } from "fs";
-import { join, dirname } from "path";
-import { fileURLToPath } from "url";
+  import { cpSync, rmSync, existsSync } from "fs";
+  import { join, dirname } from "path";
+  import { fileURLToPath } from "url";
 
-const REPO = "CagedEther/kiterae-site-shell";
-const TMP = "/tmp/kiterae-content-sync";
-const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
+  // Configure via env vars before running:
+  //   CONTENT_REPO   — GitHub repo containing your content, e.g. "owner/repo"
+  //   CONTENT_PATH   — path inside that repo to the content folder, e.g. "my-site/content"
+  //
+  // Example:
+  //   CONTENT_REPO=CagedEther/kiterae-sites CONTENT_PATH=pageant-insider-agent/content npm run sync-content
 
-console.log("Syncing content from GitHub...");
+  const REPO = process.env.CONTENT_REPO || "";
+  const CONTENT_PATH = process.env.CONTENT_PATH || "content";
+  const TMP = "/tmp/kiterae-content-sync";
+  const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 
-if (existsSync(TMP)) {
-  rmSync(TMP, { recursive: true });
-}
+  if (!REPO) {
+    console.error(
+      "Error: set CONTENT_REPO before running.\n" +
+      "  Example: CONTENT_REPO=owner/repo CONTENT_PATH=site/content npm run sync-content"
+    );
+    process.exit(1);
+  }
 
-execSync(
-  `git clone --depth 1 --filter=blob:none --sparse https://github.com/${REPO}.git ${TMP}`,
-  { stdio: "inherit" }
-);
-execSync(`git -C ${TMP} sparse-checkout set content`, { stdio: "inherit" });
+  console.log(`Syncing content from ${REPO}/${CONTENT_PATH}...`);
 
-const dest = join(ROOT, "content");
-if (existsSync(dest)) {
-  rmSync(dest, { recursive: true });
-}
-cpSync(join(TMP, "content"), dest, { recursive: true });
+  if (existsSync(TMP)) {
+    rmSync(TMP, { recursive: true });
+  }
 
-console.log("Content synced from GitHub successfully.");
+  execSync(
+    `git clone --depth 1 --filter=blob:none --sparse https://github.com/${REPO}.git ${TMP}`,
+    { stdio: "inherit" }
+  );
+  execSync(`git -C ${TMP} sparse-checkout set ${CONTENT_PATH}`, { stdio: "inherit" });
+
+  const dest = join(ROOT, "content");
+  if (existsSync(dest)) {
+    rmSync(dest, { recursive: true });
+  }
+  cpSync(join(TMP, CONTENT_PATH), dest, { recursive: true });
+
+  console.log("Content synced successfully.");
+  
